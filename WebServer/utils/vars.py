@@ -10,7 +10,7 @@ class Var(object):
     NO_PORT = str(environ.get("NO_PORT", "0").lower()) in ("1", "true", "t", "yes", "y")
     FQDN = str(environ.get("FQDN"))
     PORT=environ.get("PORT", None)
-    URL = "http{}://{}{}/".format(
+    URL = "https://dl.tgxlink.eu.org/dl/".format(
             "s" if HAS_SSL else "", FQDN, "" if NO_PORT else ":" + str(PORT)
         )
     DL_URL = environ.get("DL_URL")
